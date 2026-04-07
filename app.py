@@ -489,13 +489,13 @@ def main() -> None:
     else:
         st.info("Search for a keyword to load datasets.")
 
-    with st.expander("Deployment notes"):
+    with st.expander("About this tool"):
         st.markdown(
             """
-            - Put this file in your GitHub repository as `app.py`.
-            - Add a `requirements.txt` file in the same folder or repository root.
-            - Deploy the repo on Streamlit Community Cloud.
-            - This app uses Pyvis HTML rendered inside Streamlit.
+            This is a demonstration developed by the **Translational Research Data Challenges (TRDC) team** to explore how knowledge graphs can be generated around research datasets using OpenAlex data.
+    
+            **Disclaimer:**  
+            This is a prototype. Data and relationships are dynamically generated and may be incomplete or inaccurate. The outputs are indicative only and should not be used for decision-making without further validation.
             """
         )
 
