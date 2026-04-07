@@ -82,10 +82,9 @@ def extract_author_profile(auth_data: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
-def html_tooltip(title: str, body_lines: List[str]) -> str:
-    safe_lines = [html.escape(str(line)) for line in body_lines if line is not None]
-    joined = "<br>".join(safe_lines)
-    return f"<b>{html.escape(title)}</b><hr>{joined}"
+def html_tooltip(title, lines):
+    clean_lines = [line for line in lines if line]  # remove empty lines
+    return f"{title}\n{'-' * 30}\n" + "\n".join(clean_lines)
 
 
 @st.cache_data(show_spinner=False, ttl=3600)
