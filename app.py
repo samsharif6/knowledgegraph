@@ -494,6 +494,12 @@ def main() -> None:
             """
             This is a demonstration developed by the **Translational Research Data Challenges (TRDC) team** to explore how knowledge graphs can be generated around research datasets using OpenAlex data.
     
+            **How it works:**  
+            - The app queries OpenAlex to retrieve up to 50 datasets associated with Australia based on your search term.  
+            - Once a dataset is selected, it builds a knowledge graph centred on that dataset.  
+            - The graph includes linked entities such as authors, institutions, funders, and selected related publications (e.g., citing works and authors’ other papers).  
+            - Node sizes and connections are based on simple indicators such as citation counts and relationships available in OpenAlex.
+    
             **Disclaimer:**  
             This is a prototype. Data and relationships are dynamically generated and may be incomplete or inaccurate. The outputs are indicative only and should not be used for decision-making without further validation.
             """
